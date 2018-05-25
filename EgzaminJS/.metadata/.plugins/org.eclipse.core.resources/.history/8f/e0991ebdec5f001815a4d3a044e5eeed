@@ -1,0 +1,20 @@
+/*
+Stwórz obiekt User w JavaScript, który będzie miał:
+
+    Konstruktor przyjmujący parametr imię i zapisujący go w atrybucie name.
+    Funkcję dodaną poprzez prototyp o nazwie welcomeUser, która zwróci string z przywitaniem:
+    "Welcome " + user.name
+    np. Welcome Piotr (pamiętajcie o spacji między wyrazami).
+
+ */
+
+var User = function(imie) {
+	this.name = imie;
+};
+
+User.prototype.welcomeUser = function(imie){
+	return "Welcome" + imie;
+}
+
+var user = new User("Tomek");
+user.welcomeUser();

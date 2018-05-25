@@ -1,0 +1,139 @@
+/*
+ * Zadanie 2 (5 pkt)
+
+    Nie używaj eventu DOMContentLoaded. Skrypt jest wczytany do pliku html przed końcem body.
+    Do każdego podpunktu stwórz odpowiednią funkcję o nazwie podanej w treści zadania.
+    Każda funkcja ma zwracać tablicę.
+
+Wykonaj następujące polecenia:
+
+    1. Szukanie nazw tagów:
+        znajdź wszystkie elementy o klasie sample_class,
+        stwórz funkcję getElementsTag(elements) do której przekaż, jako argument, znalezione elementy,
+        stwórz w funkcji tablicę i wypełnij ją nazwami tagów. Pobierz je z elementów przekazanych jako argument.
+        zwróć tablicę.
+
+    2. Szukanie nazw klas:
+        Znajdź element o id sample_id.
+        stwórz funkcję getElementsClass(element) do której przekaż, jako argument, znaleziony element.
+        stwórz w funkcji tablicę i wypełnij ją nazwami klas. Pobierz klasy z przekazanego jako argument elementu.
+        zwróć tablicę.
+
+    3. Szukanie tekstu:
+        Znajdź wszystkie elementy listy znajdujące się w elemencie o klasie sample_class_2,
+        stwórz funkcję getElementsInnerText(liElements), do której przekaż, jako argument, znalezione elementy.
+        stwórz w funkcji tablicę i wypełnij ją tekstami pobranymi z każdego elementu li (
+        tych przekazanych jako argument)
+        zwróć tablicę.
+
+    4. Szukanie adresów linków:
+        Znajdź wszystkie linki,
+        stwórz funkcję getElementsAddress(aElements), do której przekaż, jako argument, 
+        znalezione elementy.
+        stwórz w funkcji tablicę i wypełnij ją adresami pobranymi z linków,
+        zwróć tablicę.
+
+    5. Szukanie tagów dzieci:
+        Znajdź wszystkie dzieci elementu o klasie sample_class_3,
+        do funkcji, która wyszukuje tagi elementów, przekaż, jako argument, znalezione dzieci.
+
+Korzystaj z JavaScript lub jQuery.
+ */
+
+////////////////Zad 1
+var sampleClass = document.querySelectorAll(".sample_class");
+// console.log(sampleClass);
+
+function getElementsTag(elements) {
+	var tab = [];
+	for (var i = 0; i < elements.length; i++) {
+		tab.push(elements[i].tagName);
+	}
+	return tab;
+}
+
+console.log(getElementsTag(sampleClass));
+
+// /////////////////Zad2
+
+var sampleId = document.querySelectorAll("#sample_id");
+// console.log(sampleId);
+
+function getElementsClass(elements) {
+	var tab = [];
+	for (var i = 0; i < elements.length; i++) {
+		tab.push(elements[i].className);
+	}
+	return tab;
+}
+
+console.log(getElementsClass(sampleId));
+
+// //////////////////Zad3
+
+var li = document.querySelectorAll(".sample_class_2 li");
+// console.log(li);
+
+function getElementsInnerText(elements) {
+	var tab = [];
+	for (var i = 0; i < elements.length; i++) {
+		tab.push(elements[i].innerText);
+
+	}
+	return tab;
+}
+
+console.log(getElementsInnerText(li));
+
+// ////////////////Zad4
+
+var a = document.querySelectorAll("a");
+// console.log(a);
+
+function getElementsAddress(elements) {
+	var tab = [];
+	for (var i = 0; i < elements.length; i++) {
+		tab.push(elements[i].getAttribute("href"));
+	}
+	return tab;
+}
+
+console.log(getElementsAddress(a));
+
+////////////////Zad 5
+
+var sampleClass3 = $(".sample_class_3").children();
+
+console.log(sampleClass3);
+
+
+function getTags(elements){
+	var tab = [];
+	for(var i = 0; i < elements.length; i++){
+		tab.push(elements[i].tagName());
+	}
+	return tab;
+}
+
+console.log(getTags(sampleClass3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

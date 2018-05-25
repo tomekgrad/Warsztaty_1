@@ -1,0 +1,16 @@
+/*
+ * Zadanie 3 (3 pkt)
+
+    Do wszystkich przycisków znajdujących się na stronie dopisz event,
+    który po naciśnięciu spowoduje, że w elemencie div pokaże się tekst trzymany w data-text.
+
+Korzystaj z JavaScript.
+ */
+
+var btn = document.getElementsByTagName('button');
+console.log(btn);
+
+btn.addEventListener("click",	function	()	{
+	
+	console.log(this);
+});

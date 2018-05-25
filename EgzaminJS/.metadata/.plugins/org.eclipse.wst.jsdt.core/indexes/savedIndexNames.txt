@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/home/tomasz/EgzaminJS/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+777957905.index
+4268773335.index
+2213592148.index
+1263208664.index
+684537120.index
+4003789060.index
+777957905.index

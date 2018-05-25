@@ -1,0 +1,12 @@
+Pytanie 1
+
+Co to jest propagacja eventów?
+Jakie znasz typy propagacji?
+Czym się od siebie różnią?
+
+Propagacja eventów polega na przekazywaniu eventów w dół lub w górę drzewa DOM.
+np. jeśli event jest nałożony na tag body, a event jest wykonany na elemencie znajdujący się wewnątrz body informacja 
+o evencie przekazywana jest w górę drzewa DOM.
+Są 2 rodzaje propagacji:
+1. Event  bubbling - przekazywanie informacji o evencie w górę drzewa DOM.
+2. Event capturing - przekazywanie informacji o evencie w dół drzewa DOM.

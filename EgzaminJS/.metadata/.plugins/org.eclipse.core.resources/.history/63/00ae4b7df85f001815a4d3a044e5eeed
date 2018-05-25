@@ -1,0 +1,53 @@
+/*
+ * Zadanie 4 (6 pkt)
+
+Na stronie znajduje się lista zakupów.
+Przeanalizuj HTML i zobacz jak lista jest zbudowana.
+Dopisz odpowiednią obsługę eventów tak aby:
+
+    Po kliknięciu przycisku pierwszego do listy został dopisany nowy produkt (np.: chleb).
+    Po kliknięciu przycisku drugiego z listy był usuwany ostatni element.
+    Po kliknięciu przycisku trzeciego na końcu listy był dodawany nowy produkt,
+     który jest klonem drugiego produktu.
+
+Korzystaj z JavaScript lub jQuery.
+ */
+
+
+
+var div = document.querySelectorAll("div");
+var btn = $("#button-1");
+var btn2 = $("#button-2");
+var btn3 = $("#button-3");
+console.log(btn);
+
+
+
+var shoppingList = document.querySelector("#shopping-list");
+var newEl = document.createElement("p");
+newEl.innerText = "Chleb";
+
+btn.on('click', function(){	
+	shoppingList.appendChild(newEl);
+})
+
+
+
+btn2.on('click', function(){
+	var lastEl = shoppingList.lastElementChild;
+	shoppingList.removeChild(lastEl);
+	console.log("kliknięty");
+})
+
+btn3.on('click', function(){
+	var toClone = shoppingList.children[1];
+	
+	var	newEl	=	toClone.cloneNode(true);
+	console.log(toClone);
+	
+	shoppingList.appendChild(newEl);
+	console.log("kliknięty");
+})
+
+
+
